@@ -6,3 +6,5 @@ data:
   plain.sql: |
     CREATE database search_db;
     CREATE database subscription_db;
+    CREATE USER search_db WITH PASSWORD 'postgres-password';
+    CREATE USER subscription_db WITH PASSWORD 'postgres-password';
