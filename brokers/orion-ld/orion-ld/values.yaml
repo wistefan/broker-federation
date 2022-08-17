@@ -7,3 +7,15 @@ orion-ld:
   mongo:
     # we want to use the individually deployed mongodb
     enabled: false
+  
+
+  route:
+    ## -- should the deployment create openshift routes
+    enabled: true
+    host: orion-ld.federation.fiware.dev
+    # -- tls configuration for the route
+    tls: 
+      termination: edge
+      insecureEdgeTerminationPolicy: Redirect
+    annotations:
+      cert-utils-operator.redhat-cop.io/certs-from-secret: federation-wildcard-tls-secret
