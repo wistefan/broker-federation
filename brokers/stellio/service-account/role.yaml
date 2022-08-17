@@ -12,3 +12,13 @@ rules:
   - securitycontextconstraints
   verbs:
   - use
+- apiGroups:
+  - ""
+  resources:
+  - services
+  verbs:
+  - get
+  - watch
+  - list
+  - create
+  - update
