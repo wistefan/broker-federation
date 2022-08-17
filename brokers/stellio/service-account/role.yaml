@@ -13,12 +13,38 @@ rules:
   verbs:
   - use
 - apiGroups:
-  - ""
+  - ''
   resources:
-  - services
+  - configmaps
+  verbs:
+  - create
+  - get
+  - list
+  - patch
+  - update
+  - watch
+  - delete
+- apiGroups:
+    - ''
+  resources:
+  - endpoints
+  - endpoints/restricted
+  verbs:
+  - create
+  - get
+  - patch
+  - update
+  - list
+  - watch
+  - delete
+
+- apiGroups:
+  - ''
+  resources:
+  - pods
   verbs:
   - get
-  - watch
   - list
-  - create
+  - patch
   - update
+  - watch
