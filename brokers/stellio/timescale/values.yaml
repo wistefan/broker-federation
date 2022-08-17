@@ -5,7 +5,6 @@ timescaledb-single:
   persistentVolumes:
     data:
       size: 10Gi
-  resources: {}
   rbac:
     create: true
   serviceAccount: 
