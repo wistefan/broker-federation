@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: stellio-api-gateway
+  name: api-gateway
+spec:
+  selector:
+    matchLabels:
+      app: stellio-api-gateway
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: stellio-api-gateway
+    spec:
+      containers:
+      - env:
+        - name: SPRING_PROFILES_ACTIVE
+          valueFrom:
+            configMapKeyRef:
+              name: stellio-conf
+              key: ENVIRONMENT
+        image: 'stellio/stellio-api-gateway:v1.12.0'
+        name: stellio-api-gateway
+        ports:
+        - containerPort: 8080
+          name: api-gateway
+      restartPolicy: Always
