@@ -4,7 +4,7 @@ timescaledb-single:
     tag: pg13-ts2.3-latest
   persistentVolumes:
     data:
-      size: 10Gi
+      size: 2Gi
   rbac:
     create: true
   serviceAccount: 

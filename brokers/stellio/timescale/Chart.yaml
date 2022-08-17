@@ -8,5 +8,5 @@ appVersion: "1.7.4"
 
 dependencies:
 - name: timescaledb-single
-  version: v0.7.1
+  version: 0.14.0
   repository: https://charts.timescale.com
