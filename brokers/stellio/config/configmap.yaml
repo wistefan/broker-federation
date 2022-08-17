@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: custom-init-scripts
+data:
+  plain.sql: |
+    CREATE database search_db;
+    CREATE database subscription_db;

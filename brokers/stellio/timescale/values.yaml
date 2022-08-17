@@ -10,3 +10,7 @@ timescaledb-single:
   serviceAccount: 
     create: false
     name: stellio
+  postInit: 
+    - configMap:
+        name: custom-init-scripts
+        optional: true

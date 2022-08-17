@@ -76,6 +76,13 @@ applications:
     helm_values:
     - values.yaml
 
+
+  - name: stellio-config
+    enabled: true
+    source_path: brokers/stellio/config
+    source_ref: *branch
+    destination: *destination
+
   - name: stellio-timescale
     enabled: true
     source_path: brokers/stellio/timescale
