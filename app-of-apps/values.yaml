@@ -7,6 +7,7 @@ applications:
   # shared services
 
   - name: certificates
+    broker: shared
     enabled: true
     source_path: brokers/ssl
     source_ref: *branch
@@ -15,6 +16,7 @@ applications:
   # orion-ld services
 
   - name: orion-ld
+    broker: orion-ld
     enabled: true
     source_path: brokers/orion-ld/orion-ld
     source_ref: *branch
@@ -23,6 +25,7 @@ applications:
     - values.yaml
 
   - name: orion-ld-mongodb
+    broker: orion-ld
     enabled: true
     source_path: brokers/orion-ld/mongodb
     source_ref: *branch
@@ -33,18 +36,21 @@ applications:
   # scorpio services
 
   - name: scorpio
+    broker: scorpio
     enabled: true
     source_path: brokers/scorpio/scorpio
     source_ref: *branch
     destination: *destination
 
   - name: scorpio-service-account
+    broker: scorpio
     enabled: true
     source_path: brokers/scorpio/service-account
     source_ref: *branch
     destination: *destination
 
   - name: scorpio-kafka
+    broker: scorpio
     enabled: true
     source_path: brokers/scorpio/kafka
     source_ref: *branch
@@ -53,6 +59,7 @@ applications:
     - values.yaml
 
   - name: scorpio-postgres
+    broker: scorpio
     enabled: true
     source_path: brokers/scorpio/postgres
     source_ref: *branch
@@ -61,6 +68,7 @@ applications:
   # stellio services
 
   - name: stellio-kafka
+    broker: stellio
     enabled: true
     source_path: brokers/stellio/kafka
     source_ref: *branch
@@ -69,6 +77,7 @@ applications:
     - values.yaml
 
   - name: stellio-neo4j
+    broker: stellio
     enabled: true
     source_path: brokers/stellio/neo4j
     source_ref: *branch
@@ -78,12 +87,14 @@ applications:
 
 
   - name: stellio-config
+    broker: stellio
     enabled: true
     source_path: brokers/stellio/config
     source_ref: *branch
     destination: *destination
 
   - name: stellio-timescale
+    broker: stellio
     enabled: true
     source_path: brokers/stellio/timescale
     source_ref: *branch
@@ -92,7 +103,15 @@ applications:
     - values.yaml
 
   - name: stellio-service-account
+    broker: stellio
     enabled: true
     source_path: brokers/stellio/service-account
+    source_ref: *branch
+    destination: *destination
+
+  - name: stellio
+    broker: stellio
+    enabled: true
+    source_path: brokers/stellio/stellio
     source_ref: *branch
     destination: *destination
