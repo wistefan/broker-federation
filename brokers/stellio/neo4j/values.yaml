@@ -5,4 +5,4 @@ neo4j-standalone:
   volumes:
     data: 
       mode: "defaultStorageClass"
-  securityContext: {}
+  serviceAccountName: stellio
