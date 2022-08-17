@@ -5,4 +5,5 @@ neo4j-standalone:
   volumes:
     data: 
       mode: "defaultStorageClass"
-  serviceAccountName: stellio
+  podSpec:
+    serviceAccountName: stellio
