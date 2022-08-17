@@ -1,0 +1,8 @@
+neo4j-standalone:
+  neo4j: 
+    password: neo4j-password
+    resources: {}
+  volumes:
+    data: 
+      mode: "defaultStorageClass"
+  securityContext: {}

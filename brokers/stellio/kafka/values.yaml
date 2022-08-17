@@ -1,8 +1,8 @@
 kafka:
-  fullnameOverride: kafka
+  fullnameOverride: stellio-kafka
   serviceAccount:
     create: false
-    name: scorpio
+    name: stellio
   persistence:
     enabled: false
   zookeeper:
@@ -10,4 +10,4 @@ kafka:
       enabled: false
     serviceAccount:
       create: false
-      name: scorpio
+      name: stellio

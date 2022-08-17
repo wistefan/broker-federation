@@ -4,11 +4,15 @@ destination_namespace: &destination broker-federation
 branch: &branch main
 
 applications:
+  # shared services
+
   - name: certificates
     enabled: true
     source_path: brokers/ssl
     source_ref: *branch
     destination: *destination
+
+  # orion-ld services
 
   - name: orion-ld
     enabled: true
@@ -26,9 +30,17 @@ applications:
     helm_values:
     - values.yaml
 
+  # scorpio services
+
   - name: scorpio
     enabled: true
     source_path: brokers/scorpio/scorpio
+    source_ref: *branch
+    destination: *destination
+
+  - name: scorpio-service-account
+    enabled: true
+    source_path: brokers/scorpio/service-account
     source_ref: *branch
     destination: *destination
 
@@ -43,5 +55,29 @@ applications:
   - name: scorpio-postgres
     enabled: true
     source_path: brokers/scorpio/postgres
+    source_ref: *branch
+    destination: *destination
+
+  # stellio services
+
+  - name: stellio-kafka
+    enabled: true
+    source_path: brokers/stellio/kafka
+    source_ref: *branch
+    destination: *destination
+    helm_values:
+    - values.yaml
+
+  - name: stellio-neo4j
+    enabled: true
+    source_path: brokers/stellio/neo4j
+    source_ref: *branch
+    destination: *destination
+    helm_values:
+    - values.yaml
+
+  - name: stellio-service-account
+    enabled: true
+    source_path: brokers/stellio/service-account
     source_ref: *branch
     destination: *destination
