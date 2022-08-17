@@ -1,7 +1,7 @@
 timescaledb-single:
   image:
     repository: timescale/timescaledb-ha
-    tag: pg12.5-ts1.7.4-p3
+    tag: pg13-ts2.3-latest
   persistentVolumes:
     data:
       size: 10Gi
