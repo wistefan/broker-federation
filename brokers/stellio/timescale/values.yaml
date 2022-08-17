@@ -1,0 +1,13 @@
+timescaledb-single:
+  image:
+    repository: timescale/timescaledb-ha
+    tag: pg12.5-ts1.7.4-p3
+  persistentVolumes:
+  data:
+    size: 10Gi
+  resources: {}
+  rbac:
+    create: true
+  serviceAccount: 
+    create: false
+    name: stellio
