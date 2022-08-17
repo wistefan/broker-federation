@@ -3,8 +3,8 @@ timescaledb-single:
     repository: timescale/timescaledb-ha
     tag: pg12.5-ts1.7.4-p3
   persistentVolumes:
-  data:
-    size: 10Gi
+    data:
+      size: 10Gi
   resources: {}
   rbac:
     create: true
