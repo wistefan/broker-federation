@@ -18,11 +18,30 @@ applications:
     helm_values:
     - values.yaml
 
-  - name: mongodb
+  - name: orion-ld-mongodb
     enabled: true
     source_path: brokers/orion-ld/mongodb
     source_ref: *branch
     destination: *destination
     helm_values:
     - values.yaml
-  
+
+  - name: scorpio
+    enabled: true
+    source_path: brokers/scorpio/scorpio
+    source_ref: *branch
+    destination: *destination
+
+  - name: scorpio-kafka
+    enabled: true
+    source_path: brokers/scorpio/kafka
+    source_ref: *branch
+    destination: *destination
+    helm_values:
+    - values.yaml
+
+  - name: scorpio-postgres
+    enabled: true
+    source_path: brokers/scorpio/postgres
+    source_ref: *branch
+    destination: *destination
