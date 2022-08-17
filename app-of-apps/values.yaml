@@ -1,0 +1,28 @@
+source: https://github.com/wistefan/broker-federation
+release: broker-federation
+destination_namespace: &destination broker-federation
+branch: &branch main
+
+applications:
+  - name: certificates
+    enabled: true
+    source_path: brokers/ssl
+    source_ref: *branch
+    destination: *destination
+
+  - name: orion-ld
+    enabled: true
+    source_path: brokers/orion-ld/orion-ld
+    source_ref: *branch
+    destination: *destination
+    helm_values:
+    - values.yaml
+
+  - name: mongodb
+    enabled: true
+    source_path: brokers/orion-ld/mongodb
+    source_ref: *branch
+    destination: *destination
+    helm_values:
+    - values.yaml
+  

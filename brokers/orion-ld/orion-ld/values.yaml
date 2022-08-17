@@ -1,0 +1,9 @@
+orion-ld:
+  broker:
+    db:
+      hosts:
+        - orion-ld-mongo-db-mongodb
+
+  mongo:
+    # we want to use the individually deployed mongodb
+    enabled: false

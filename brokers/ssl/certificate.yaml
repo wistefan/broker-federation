@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: federation-wildcard-cert
+spec:
+  ## secret the certificate should be stored to, will be referenced by the route
+  secretName: federation-wildcard-tls-secret
+  issuerRef: 
+    ## certificate issuer, as created in the cert-manager installation step
+    kind: ClusterIssuer
+    name: letsencrypt-aws-prod
+  ## dns configuration. This will be a wildcard certificate, dedicate one can be created, too
+  commonName: "*.federation.fiware.dev"
+  dnsNames:
+    - "*.federation.fiware.dev"

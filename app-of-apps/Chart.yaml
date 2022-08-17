@@ -1,0 +1,8 @@
+apiVersion: v2
+name: broker-federation
+description: Helm chart to deploy context-brokers for demonstrating federation
+type: application
+version: 0.0.1
+maintainers:
+  - name: Stefan Wiedemann 
+    email: stefan.wiedemann@fiware.org
