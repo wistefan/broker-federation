@@ -2,7 +2,7 @@ orion-ld:
   broker:
     db:
       hosts:
-        - orion-ld-mongo-db-mongodb
+        - mongodb
 
   mongo:
     # we want to use the individually deployed mongodb
