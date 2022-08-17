@@ -31,14 +31,14 @@ spec:
                name: stellio-conf
                key: ENVIRONMENT
           - name: SPRING_FLYWAY_URL
-            value: jdbc:postgresql://postgres/$(STELLIO_SUBSCRIPTION_DB_DATABASE)
+            value: jdbc:postgresql://stellio-timescale/$(STELLIO_SUBSCRIPTION_DB_DATABASE)
           - name: SPRING_R2DBC_PASSWORD
             valueFrom:
               configMapKeyRef:
                 name: stellio-conf
                 key: STELLIO_SUBSCRIPTION_DB_PASSWORD
           - name: SPRING_R2DBC_URL
-            value: r2dbc:postgresql://postgres/$(STELLIO_SUBSCRIPTION_DB_DATABASE)
+            value: r2dbc:postgresql://stellio-timescale/$(STELLIO_SUBSCRIPTION_DB_DATABASE)
           - name: SPRING_R2DBC_USERNAME
             valueFrom:
               configMapKeyRef:
