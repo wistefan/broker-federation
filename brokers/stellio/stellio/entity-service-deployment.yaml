@@ -18,9 +18,9 @@ spec:
       containers:
         - env:
           - name: SPRING_NEO4J_URI
-            value: bolt://neo4j:7687
+            value: bolt://stellio-neo4j:7687
           - name: ORG_NEO4J_DRIVER_URI
-            value: bolt://neo4j:7687
+            value: bolt://stellio-neo4j:7687
           - name: MANAGEMENT_ENDPOINT_HEALTH_DB_ENABLED
             value: "true"
           - name: MANAGEMENT_HEALTH_DEFAULTS_ENABLED
