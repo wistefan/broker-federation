@@ -8,7 +8,7 @@ neo4j-standalone:
   podSpec:
     serviceAccountName: stellio
   config:
-    dbms.allow_upgrade: true
+    dbms.allow_upgrade: "true"
     dbms.default_database: "stellio"
     dbms.security.procedures.unrestricted: "apoc.*"
     dbms.security.procedures.allowlist: "apoc.*"
