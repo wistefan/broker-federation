@@ -7,8 +7,8 @@ neo4j-standalone:
       mode: "defaultStorageClass"
   podSpec:
     serviceAccountName: stellio
-  ssl:
-    bolt:
-      client_auth: NONE
-    https:
-      client_auth: NONE
+  config:
+    dbms.allow_upgrade: true
+    dbms.default_database: "stellio"
+    dbms.security.procedures.unrestricted: "apoc.*"
+    dbms.security.procedures.allowlist: "apoc.*"
