@@ -12,3 +12,5 @@ neo4j-standalone:
     dbms.default_database: "stellio"
     dbms.security.procedures.unrestricted: "apoc.*"
     dbms.security.procedures.allowlist: "apoc.*"
+    dbms.ssl.policy.bolt.client_auth: "NONE"
+    dbms.ssl.policy.https.client_auth: "NONE"
