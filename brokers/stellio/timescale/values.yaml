@@ -13,7 +13,7 @@ timescaledb-single:
   postInit: 
     - configMap:
         name: custom-init-scripts
-        optional: true
+        optional: false
   secrets:
     credentials:
         PATRONI_SUPERUSER_PASSWORD: "postgres-password"
