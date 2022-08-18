@@ -42,7 +42,7 @@ spec:
                 name: stellio-conf
                 key: STELLIO_SUBSCRIPTION_DB_PASSWORD
           - name: SPRING_R2DBC_URL
-            value: r2dbc:postgresql://stellio-timescale/$(STELLIO_SUBSCRIPTION_DB_DATABASE)
+            value: r2dbc:postgresql://stellio-timescale/$(STELLIO_SUBSCRIPTION_DB_DATABASE)?ssl=true&sslmode=require
           - name: SPRING_R2DBC_USERNAME
             valueFrom:
               configMapKeyRef:
