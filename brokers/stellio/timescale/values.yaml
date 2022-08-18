@@ -16,6 +16,7 @@ timescaledb-single:
         optional: false
   secrets:
     credentials:
-        PATRONI_SUPERUSER_PASSWORD: "postgres-password"
-        PATRONI_REPLICATION_PASSWORD: "postgres-password"
-        PATRONI_admin_PASSWORD: "postgres-password"
+      PATRONI_SUPERUSER_PASSWORD: "postgres-password"
+      PATRONI_REPLICATION_PASSWORD: "postgres-password"
+      PATRONI_admin_PASSWORD: "postgres-password"
+  replicaCount: 1
