@@ -14,3 +14,4 @@ neo4j-standalone:
     dbms.security.procedures.allowlist: "apoc.*"
     dbms.ssl.policy.bolt.client_auth: "NONE"
     dbms.ssl.policy.https.client_auth: "NONE"
+    dbms.security.auth_enabled: "false"
