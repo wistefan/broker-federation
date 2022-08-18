@@ -1,6 +1,6 @@
 neo4j-standalone:
   neo4j: 
-    password: neo4j-password
+    password: neo4j
     resources: {}
   volumes:
     data: 
