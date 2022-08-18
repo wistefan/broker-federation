@@ -3,10 +3,14 @@ kind: ConfigMap
 metadata:
   name: custom-init-scripts
 data:
-  plain.sql: |
-    CREATE USER search_db WITH PASSWORD 'postgres-password';
-    CREATE USER subscription_db WITH PASSWORD 'postgres-password';
-    CREATE database search_db;
-    CREATE database subscription_db;
-    \c subscription_db;
-    CREATE EXTENSION postgis;
+  shell_test.sh: |+
+    #!/bin/sh
+    psql <<- EOSQL
+      CREATE USER search_db WITH PASSWORD 'postgres-password';
+      CREATE USER subscription_db WITH PASSWORD 'postgres-password';
+      CREATE database search_db;
+      CREATE database subscription_db;
+    EOSQL
+    psql -d subscription_db <<- EOSQL
+      CREATE EXTENSION postgis;
+    EOSQL
