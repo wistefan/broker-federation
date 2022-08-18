@@ -1,7 +1,7 @@
 timescaledb-single:
   image:
-    repository: timescale/timescaledb-ha
-    tag: pg13-ts2.3-latest
+    repository: stellio/stellio-timescale-postgis
+    tag: 2.3.0-pg13
   persistentVolumes:
     data:
       size: 2Gi
