@@ -17,6 +17,10 @@ spec:
     spec:
       containers:
         - env:
+          - name: MANAGEMENT_HEALTH_DB_ENABLED
+            value: "true"
+          - name: MANAGEMENT_HEALTH_DEFAULTS_ENABLED
+            value: "true"
           - name: APPLICATION_AUTHENTICATION_ENABLED
             valueFrom:
               configMapKeyRef:
