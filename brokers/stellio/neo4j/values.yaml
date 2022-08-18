@@ -14,3 +14,5 @@ neo4j-standalone:
     dbms.ssl.policy.bolt.client_auth: "NONE"
     dbms.ssl.policy.https.client_auth: "NONE"
     dbms.security.auth_enabled: "false"
+  apoc_config:
+    apoc.trigger.enabled: "true"
