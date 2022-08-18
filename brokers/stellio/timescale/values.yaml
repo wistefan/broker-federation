@@ -20,3 +20,5 @@ timescaledb-single:
       PATRONI_REPLICATION_PASSWORD: "postgres-password"
       PATRONI_admin_PASSWORD: "postgres-password"
   replicaCount: 1
+  timescaledbTune:
+    enabled: false
