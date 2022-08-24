@@ -65,6 +65,13 @@ applications:
     source_ref: *branch
     destination: *destination
 
+  - name: scorpio-map
+    broker: scorpio
+    enabled: true
+    source_path: brokers/scorpio/map
+    source_ref: *branch
+    destination: *destination
+
   # stellio services
 
   - name: stellio-kafka
