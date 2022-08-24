@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: map
+  name: map
+spec:
+  selector:
+    matchLabels:
+      app: map
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: map
+    spec:
+      serviceAccount: scorpio
+      serviceAccountName: scorpio
+      containers:
+        - imagePullPolicy: IfNotPresent
+          image: scorpiobroker/ngsildmap
+          name: map
+          env:
+            - name: DEFAULT_HOST
+              value: "https://scorpio.federation.fiware.dev" 
+            - name: OBSERVED_AT
+              value: "false"
+            - name: DEFAULT_AT_CONTEXT
+              value: "https://raw.githubusercontent.com/easy-global-market/ngsild-api-data-models/master/airQualityMonitoring/jsonld-contexts/airQualityMonitoring-compound.jsonld"
+            - name: SCALEUNITS
+              value: "mg"
+            - name: DEFAULT_TYPE_ATTRS_COMBOS
+              value: "AirQualityObserved;o3"
