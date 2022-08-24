@@ -31,3 +31,5 @@ spec:
               value: "mg"
             - name: DEFAULT_TYPE_ATTRS_COMBOS
               value: "AirQualityObserved;o3"
+            - name: MAP_PORT
+              value: "8050"
