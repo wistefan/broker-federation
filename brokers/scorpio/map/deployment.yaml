@@ -34,4 +34,4 @@ spec:
             - name: MAP_PORT
               value: "8050"
             - name: DEFAULT_LIMIT
-              value: 50
+              value: "50"
