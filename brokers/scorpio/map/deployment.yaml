@@ -18,7 +18,7 @@ spec:
       serviceAccountName: scorpio
       containers:
         - imagePullPolicy: IfNotPresent
-          image: scorpiobroker/ngsildmap:0.2
+          image: scorpiobroker/ngsildmap:0.3
           name: map
           env:
             - name: DEFAULT_HOST
